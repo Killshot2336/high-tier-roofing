@@ -1,3 +1,5 @@
+import StickyCta from "./components/StickyCta";
+
 type Stat = { top: string; bottom: string };
 type Service = { title: string; desc: string; tag: string };
 type Review = { name: string; city: string; text: string };
@@ -81,10 +83,7 @@ function IconShield() {
 function IconBolt() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" className="text-orange-500">
-      <path
-        fill="currentColor"
-        d="M13 2L3 14h8l-1 8l10-12h-8l1-8z"
-      />
+      <path fill="currentColor" d="M13 2L3 14h8l-1 8l10-12h-8l1-8z" />
     </svg>
   );
 }
@@ -130,14 +129,22 @@ export default function Home() {
           </a>
 
           <nav className="hidden items-center gap-7 text-sm text-slate-300 md:flex">
-            <a className="hover:text-white transition" href="#services">Services</a>
-            <a className="hover:text-white transition" href="#proof">Proof</a>
-            <a className="hover:text-white transition" href="#reviews">Reviews</a>
-            <a className="hover:text-white transition" href="#quote">Free Inspection</a>
+            <a className="hover:text-white transition" href="#services">
+              Services
+            </a>
+            <a className="hover:text-white transition" href="#proof">
+              Proof
+            </a>
+            <a className="hover:text-white transition" href="#reviews">
+              Reviews
+            </a>
+            <a className="hover:text-white transition" href="#inspection">
+              Free Inspection
+            </a>
           </nav>
 
           <a
-            href="#quote"
+            href="#inspection"
             className="rounded-xl bg-orange-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-orange-400"
           >
             Get Free Inspection
@@ -156,31 +163,30 @@ export default function Home() {
                   Storm Damage • Insurance Help • Fast Scheduling
                 </Badge>
                 <Badge>
-                  <span className="mr-2 inline-flex"><IconBolt /></span>
+                  <span className="mr-2 inline-flex">
+                    <IconBolt />
+                  </span>
                   24–48h Response
                 </Badge>
               </div>
 
               <h1 className="mt-6 text-4xl font-bold leading-tight md:text-6xl">
-                High-Tier Roofing That{" "}
-                <span className="text-orange-500">Wins Trust</span>{" "}
-                in North Texas
+                High-Tier Roofing That <span className="text-orange-500">Wins Trust</span> in North Texas
               </h1>
 
               <p className="mt-5 max-w-xl text-lg text-slate-300">
-                Free inspections, clean installs, and insurance-claim support.
-                Built to convert calls into booked jobs—fast.
+                Free inspections, clean installs, and insurance-claim support. Built for homeowners who want clarity and speed.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="#quote"
+                  href="#inspection"
                   className="rounded-2xl bg-orange-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-orange-400"
                 >
                   Schedule Free Inspection
                 </a>
                 <a
-                  href="tel:+14695551234"
+                  href="tel:4695551234"
                   className="rounded-2xl border border-slate-800 bg-slate-900/40 px-6 py-3 font-semibold text-white transition hover:bg-slate-900"
                 >
                   <span className="inline-flex items-center gap-2">
@@ -192,10 +198,7 @@ export default function Home() {
 
               <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
                 {STATS.map((s) => (
-                  <div
-                    key={s.top}
-                    className="rounded-2xl border border-slate-900 bg-slate-900/30 px-4 py-4"
-                  >
+                  <div key={s.top} className="rounded-2xl border border-slate-900 bg-slate-900/30 px-4 py-4">
                     <div className="text-base font-semibold text-white">{s.top}</div>
                     <div className="mt-1 text-sm text-slate-400">{s.bottom}</div>
                   </div>
@@ -203,12 +206,16 @@ export default function Home() {
               </div>
 
               <div className="mt-8 flex items-center gap-2 text-sm text-slate-400">
-                <IconStar /><IconStar /><IconStar /><IconStar /><IconStar />
+                <IconStar />
+                <IconStar />
+                <IconStar />
+                <IconStar />
+                <IconStar />
                 <span className="ml-1">Trusted by homeowners across Plano • Wylie • Garland</span>
               </div>
             </div>
 
-            {/* Right: “premium” visual card */}
+            {/* Right visual card */}
             <div className="floaty rounded-3xl border border-slate-900 bg-gradient-to-br from-slate-900 to-slate-950 p-6 shadow-[0_0_80px_-40px_rgba(249,115,22,0.35)]">
               <div className="rounded-2xl border border-slate-900 bg-slate-900/40 p-6">
                 <div className="flex items-center justify-between">
@@ -218,9 +225,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <div className="mt-3 text-2xl font-semibold">
-                  Storm Restoration + Claim Support
-                </div>
+                <div className="mt-3 text-2xl font-semibold">Storm Restoration + Claim Support</div>
 
                 <div className="mt-5 grid gap-3">
                   {[
@@ -240,7 +245,7 @@ export default function Home() {
                 </div>
 
                 <div className="mt-6 rounded-2xl bg-orange-500/10 p-4 text-sm text-orange-200">
-                  “Homeowners buy trust. This page is engineered to convert.”
+                  Homeowners buy trust. This page is engineered to convert.
                 </div>
               </div>
             </div>
@@ -274,7 +279,7 @@ export default function Home() {
               </p>
             </div>
             <a
-              href="#quote"
+              href="#inspection"
               className="w-fit rounded-2xl border border-slate-800 bg-slate-900/30 px-5 py-3 font-semibold text-white transition hover:bg-slate-900"
             >
               Get a free inspection
@@ -294,12 +299,6 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="mt-2 text-slate-400">{s.desc}</div>
-                <div className="mt-4 h-px w-full bg-slate-800/70" />
-                <div className="mt-4 text-sm text-slate-300">
-                  Designed for <span className="text-white font-semibold">speed</span>,{" "}
-                  <span className="text-white font-semibold">trust</span>, and{" "}
-                  <span className="text-white font-semibold">conversion</span>.
-                </div>
                 <div className="mt-5 inline-flex items-center gap-2 text-sm text-orange-200 opacity-90">
                   <span className="h-2 w-2 rounded-full bg-orange-500" />
                   Free inspection included
@@ -315,9 +314,8 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="text-center">
             <h2 className="text-3xl font-semibold">Before & After Proof</h2>
-            <p className="mt-2 text-slate-400">
-              This section is where homeowners decide you’re real.
-            </p>
+            <p className="mt-2 text-slate-400">Recent residential and storm restoration work across North Texas.
+</p>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -329,17 +327,18 @@ export default function Home() {
               "Flashing + Vent Rebuild",
               "Gutter + Roof System Combo",
             ].map((label) => (
-              <div
-                key={label}
-                className="rounded-3xl border border-slate-900 bg-slate-900/20 p-4"
-              >
-                <div className="aspect-video rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 flex items-center justify-center text-slate-500">
-                  Image Slot
-                </div>
+              <div key={label} className="rounded-3xl border border-slate-900 bg-slate-900/20 p-4">
+<div className="relative aspect-video overflow-hidden rounded-2xl border border-slate-800">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(249,115,22,0.15),transparent_60%),radial-gradient(circle_at_70%_70%,rgba(14,165,233,0.1),transparent_60%)]" />
+  <div className="absolute inset-0 bg-slate-900/80" />
+  <div className="relative flex h-full items-center justify-center">
+    <span className="rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-sm text-orange-200">
+      Recent North Texas Project
+    </span>
+  </div>
+</div>
                 <div className="mt-4 font-semibold">{label}</div>
-                <div className="mt-1 text-sm text-slate-400">
-                  Swap these with real project photos when you onboard a client.
-                </div>
+                <div className="mt-1 text-sm text-slate-400">Use real before/after to maximize trust.</div>
               </div>
             ))}
           </div>
@@ -349,7 +348,7 @@ export default function Home() {
               {[
                 ["4-step process", "Inspect → Document → Install → Cleanup"],
                 ["Financing ready", "Sell bigger jobs without sticker shock"],
-                ["Built for calls", "Strong CTAs everywhere that matter"],
+                ["Built for calls", "Strong CTAs where they matter"],
               ].map(([h, p]) => (
                 <div key={h} className="rounded-2xl border border-slate-900 bg-slate-950/30 p-5">
                   <div className="font-semibold">{h}</div>
@@ -367,22 +366,21 @@ export default function Home() {
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-3xl font-semibold">5-Star Customer Reviews</h2>
-              <p className="mt-2 max-w-2xl text-slate-400">
-                Social proof is conversion fuel. Keep this tight and believable.
-              </p>
+              <p className="mt-2 max-w-2xl text-slate-400">Social proof is conversion fuel. Keep this believable and local.</p>
             </div>
             <div className="inline-flex items-center gap-2 rounded-2xl border border-slate-800 bg-slate-900/30 px-5 py-3 text-sm text-slate-300">
-              <IconStar /><IconStar /><IconStar /><IconStar /><IconStar />
+              <IconStar />
+              <IconStar />
+              <IconStar />
+              <IconStar />
+              <IconStar />
               <span className="ml-1">Top rated in North Texas</span>
             </div>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {REVIEWS.map((r) => (
-              <div
-                key={r.name}
-                className="rounded-3xl border border-slate-900 bg-slate-900/20 p-6"
-              >
+              <div key={r.name} className="rounded-3xl border border-slate-900 bg-slate-900/20 p-6">
                 <div className="flex items-center justify-between">
                   <div className="text-orange-400">★★★★★</div>
                   <div className="text-xs text-slate-500">{r.city}</div>
@@ -396,15 +394,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* QUOTE / CONTACT */}
-      <section id="quote" className="border-t border-slate-900 bg-slate-950">
+      {/* INSPECTION / CONTACT */}
+      <section id="inspection" className="border-t border-slate-900 bg-slate-950">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="grid gap-10 md:grid-cols-2">
             <div>
               <h2 className="text-3xl font-semibold">Schedule a free inspection</h2>
-              <p className="mt-2 text-slate-400">
-                Demo form for now. Next step we’ll wire it to email/text (Resend).
-              </p>
+              <p className="mt-2 text-slate-400">Tell us what’s going on — we’ll follow up to confirm your time.</p>
 
               <div className="mt-6 rounded-3xl border border-slate-900 bg-slate-900/20 p-6">
                 <div className="font-semibold">What happens next</div>
@@ -426,68 +422,107 @@ export default function Home() {
               </div>
 
               <div className="mt-6 rounded-3xl border border-orange-500/25 bg-orange-500/10 p-6 text-orange-100">
-                <div className="font-semibold">Storm season offer</div>
-                <div className="mt-1 text-sm opacity-90">
-                  Free inspection + documentation package (limited slots weekly).
-                </div>
+                <div className="font-semibold">Storm season slots</div>
+                <div className="mt-1 text-sm opacity-90">Free inspection + documentation package (limited weekly).</div>
               </div>
             </div>
 
-            <form className="rounded-3xl border border-slate-900 bg-slate-900/20 p-6">
-              <div className="grid gap-4 md:grid-cols-2">
-                <label className="grid gap-2">
-                  <span className="text-sm text-slate-300">Name</span>
-                  <input
-                    className="rounded-2xl border border-slate-800 bg-slate-950/40 px-4 py-3 text-white outline-none focus:border-orange-500"
-                    placeholder="Your name"
-                  />
-                </label>
+<form
+  className="rounded-3xl border border-slate-900 bg-slate-900/20 p-6"
+  onSubmit={async (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
 
-                <label className="grid gap-2">
-                  <span className="text-sm text-slate-300">Phone</span>
-                  <input
-                    className="rounded-2xl border border-slate-800 bg-slate-950/40 px-4 py-3 text-white outline-none focus:border-orange-500"
-                    placeholder="(469) 555-0000"
-                  />
-                </label>
+    const payload = {
+      name: String(fd.get("name") || ""),
+      phone: String(fd.get("phone") || ""),
+      address: String(fd.get("address") || ""),
+      message: String(fd.get("message") || ""),
+    };
 
-                <label className="grid gap-2 md:col-span-2">
-                  <span className="text-sm text-slate-300">Address</span>
-                  <input
-                    className="rounded-2xl border border-slate-800 bg-slate-950/40 px-4 py-3 text-white outline-none focus:border-orange-500"
-                    placeholder="Street, City"
-                  />
-                </label>
+    const btn = form.querySelector("button[type='submit']") as HTMLButtonElement | null;
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = "Sending...";
+    }
 
-                <label className="grid gap-2 md:col-span-2">
-                  <span className="text-sm text-slate-300">What’s going on?</span>
-                  <textarea
-                    className="min-h-[120px] rounded-2xl border border-slate-800 bg-slate-950/40 px-4 py-3 text-white outline-none focus:border-orange-500"
-                    placeholder="Leak, hail damage, missing shingles, full replacement, etc."
-                  />
-                </label>
-              </div>
+    try {
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-              <button
-                type="button"
-                className="mt-5 w-full rounded-2xl bg-orange-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-orange-400"
-              >
-                Request Inspection
-              </button>
+      if (!res.ok) throw new Error("Bad response");
+      form.reset();
+      alert("Request sent. We’ll contact you shortly.");
+    } catch {
+      alert("Could not send. Please call instead.");
+    } finally {
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = "Request Inspection";
+      }
+    }
+  }}
+>
+  <div className="grid gap-4 md:grid-cols-2">
+    <label className="grid gap-2">
+      <span className="text-sm text-slate-300">Name</span>
+      <input
+        name="name"
+        required
+        className="rounded-2xl border border-slate-800 bg-slate-950/40 px-4 py-3 text-white outline-none focus:border-orange-500"
+        placeholder="Your name"
+      />
+    </label>
 
-              <div className="mt-4 text-center text-xs text-slate-500">
-                Demo form. Next step: connect to email/text.
-              </div>
+    <label className="grid gap-2">
+      <span className="text-sm text-slate-300">Phone</span>
+      <input
+        name="phone"
+        required
+        className="rounded-2xl border border-slate-800 bg-slate-950/40 px-4 py-3 text-white outline-none focus:border-orange-500"
+        placeholder="(469) 555-0000"
+      />
+    </label>
 
-              <div className="mt-6 grid gap-3">
-                <a
-                  href="tel:+14695551234"
-                  className="flex items-center justify-center gap-2 rounded-2xl border border-slate-800 bg-slate-950/40 px-6 py-3 font-semibold text-white transition hover:bg-slate-900"
-                >
-                  <IconPhone /> Call now
-                </a>
-              </div>
-            </form>
+    <label className="grid gap-2 md:col-span-2">
+      <span className="text-sm text-slate-300">Address</span>
+      <input
+        name="address"
+        className="rounded-2xl border border-slate-800 bg-slate-950/40 px-4 py-3 text-white outline-none focus:border-orange-500"
+        placeholder="Street, City"
+      />
+    </label>
+
+    <label className="grid gap-2 md:col-span-2">
+      <span className="text-sm text-slate-300">What’s going on?</span>
+      <textarea
+        name="message"
+        className="min-h-[120px] rounded-2xl border border-slate-800 bg-slate-950/40 px-4 py-3 text-white outline-none focus:border-orange-500"
+        placeholder="Leak, hail damage, missing shingles, full replacement, etc."
+      />
+    </label>
+  </div>
+
+  <button
+    type="submit"
+    className="mt-5 w-full rounded-2xl bg-orange-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-orange-400"
+  >
+    Request Inspection
+  </button>
+
+  <div className="mt-6 grid gap-3">
+    <a
+      href="tel:4695551234"
+      className="flex items-center justify-center gap-2 rounded-2xl border border-slate-800 bg-slate-950/40 px-6 py-3 font-semibold text-white transition hover:bg-slate-900"
+    >
+      Call now
+    </a>
+  </div>
+</form>
           </div>
         </div>
       </section>
@@ -499,19 +534,17 @@ export default function Home() {
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
                 <div className="text-2xl font-bold">Book your free inspection</div>
-                <div className="mt-1 text-slate-300">
-                  Fast scheduling • Clean installs • Insurance support
-                </div>
+                <div className="mt-1 text-slate-300">Fast scheduling • Clean installs • Insurance support</div>
               </div>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="#quote"
+                  href="#inspection"
                   className="rounded-2xl bg-orange-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-orange-400"
                 >
                   Schedule now
                 </a>
                 <a
-                  href="tel:+14695551234"
+                  href="tel:4695551234"
                   className="rounded-2xl border border-slate-800 bg-slate-950/40 px-6 py-3 font-semibold text-white transition hover:bg-slate-900"
                 >
                   Call (469) 555-1234
@@ -523,14 +556,26 @@ export default function Home() {
           <footer className="mt-10 flex flex-col gap-3 border-t border-slate-900 pt-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
             <div>© {new Date().getFullYear()} Elite Roofing & Restoration</div>
             <div className="flex flex-wrap gap-4">
-              <a className="hover:text-slate-300 transition" href="#services">Services</a>
-              <a className="hover:text-slate-300 transition" href="#proof">Proof</a>
-              <a className="hover:text-slate-300 transition" href="#reviews">Reviews</a>
-              <a className="hover:text-slate-300 transition" href="#quote">Free Inspection</a>
+              <a className="hover:text-slate-300 transition" href="#services">
+                Services
+              </a>
+              <a className="hover:text-slate-300 transition" href="#proof">
+                Proof
+              </a>
+              <a className="hover:text-slate-300 transition" href="#reviews">
+                Reviews
+              </a>
+              <a className="hover:text-slate-300 transition" href="#inspection">
+                Free Inspection
+              </a>
             </div>
           </footer>
         </div>
       </section>
+
+      {/* Sticky mobile CTA bar + spacer */}
+      <StickyCta />
+      <div className="h-20 md:hidden" />
     </main>
   );
 }
