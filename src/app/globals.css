@@ -10,8 +10,15 @@ html, body {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply bg-slate-950 text-white antialiased;
+  background: #020617; /* slate-950 */
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Premium selection */
@@ -38,9 +45,3 @@ body {
 .floaty {
   animation: floaty 6s ease-in-out infinite;
 }
-
-/* Smooth anchors */
-html {
-  scroll-behavior: smooth;
-}
-
